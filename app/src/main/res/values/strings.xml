@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">JU Blood Book</string>
+    <string name="sign_up"><u> Sign Up </u></string>
+    <string name="log_in"><u>Log in</u></string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="achiev">Achievements</string>
+    <string name="fndBlood">Find Blood Donor</string>
+    <string name="lgout">Log out</string>
+    <string name="nearH">Find nearest Hospitals</string>
+    <string name="choose_image"><u>Choose Image</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mobile">Mobile No</string>
+    <string name="BloodGroup">Blood Group</string>
+    <string name="Division">Choose Division</string>
+    <string-array name="division_list">
+        <item>Dhaka</item>
+        <item>Rajshahi</item>
+        <item>Barisal</item>
+        <item>Khulna</item>
+        <item>Sylhet</item>
+        <item>Rangpur</item>
+        <item>Chittagong</item>
+        <item>Mymensingh</item>
+
+    </string-array>
+
+    <array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+
+    <array name="Blood_Group">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </array>
+</resources>
