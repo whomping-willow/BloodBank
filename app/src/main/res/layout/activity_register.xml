@@ -6,21 +6,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/grad_2"
     tools:context=".Activities.RegisterActivity">
     
     <LinearLayout
         android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <TextView
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:padding="10dp"
-            android:text="Your Details will be public to the Community. By using this app you also need to be a donor to help those who are in need"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Register and Be a Donor"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="34sp"
+            android:textStyle="bold">
 
         </TextView>
         <com.google.android.material.textfield.TextInputLayout
@@ -29,13 +34,15 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
+
             <EditText
                 android:id="@+id/name"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:hint="Name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Name"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -46,13 +53,15 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
+
             <EditText
                 android:id="@+id/department"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:hint="Department"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Department"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -61,13 +70,15 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
+
             <EditText
                 android:id="@+id/batch"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:hint="Batch"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Batch"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -76,13 +87,15 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
+
             <EditText
                 android:id="@+id/roll"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:hint="Roll"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Roll"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -91,13 +104,15 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
+
             <EditText
                 android:id="@+id/reg"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:hint="Registration No"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Registration No"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -107,13 +122,15 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
+
             <EditText
                 android:id="@+id/district"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:hint="District"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="District"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -123,14 +140,35 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
+
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Date of Birth"
+                android:focusable="false"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
             <EditText
                 android:id="@+id/number"
-                android:textSize="20sp"
-                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
                 android:hint="Mobile Number(Verifiable)"
                 android:inputType="number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -139,27 +177,37 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp">
+
             <EditText
                 android:id="@+id/email"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:hint="Email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Email"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
+
+
             android:layout_marginEnd="10dp">
-            <EditText
+
+
+            <Spinner
                 android:id="@+id/blood_group"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:hint="Blood Group"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:entries="@array/Blood_Group"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/BloodGroup"
+
+                android:textColor="@color/material_dynamic_neutral50"
+                android:textSize="20sp" />
+
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
@@ -169,14 +217,16 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             app:passwordToggleEnabled="true">
+
             <EditText
                 android:id="@+id/password"
-                android:textSize="20sp"
-                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
         <LinearLayout
@@ -190,30 +240,34 @@
                 android:layout_height="150dp"
                 android:padding="8dp"
                 android:src="@drawable/ic_image_black_24dp" />
+
             <TextView
                 android:id="@+id/choose_text"
-                android:gravity="center"
-                android:textAlignment="gravity"
-                android:text="@string/choose_image"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                android:textColor="@color/colorPrimary"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="@string/choose_image"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
+
         <Button
             android:id="@+id/submit_button"
-            android:background="@drawable/button_bg"
-            android:text="Become a Donor"
-
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"/>
+
+            android:layout_margin="20dp"
+            android:background="@drawable/grad"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Become a Donor"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -235,6 +289,8 @@
 
 
         </LinearLayout>
+
+
 
     </LinearLayout>
 

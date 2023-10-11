@@ -102,8 +102,12 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent);
                 }
-                if(id==R.id.blood_storage){
+                else if(id==R.id.blood_storage){
                     Intent intent = new Intent(MainActivity.this, FetchDonorActivity.class);
+                    startActivity(intent);
+                }
+                else if(id==R.id.userprofile){
+                    Intent intent = new Intent(MainActivity.this, UserProfile.class);
                     startActivity(intent);
                 }
                 return true;

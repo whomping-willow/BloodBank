@@ -68,6 +68,9 @@ public class LoginActivity extends AppCompatActivity {
                                 final String password=snapshot.child(number).child("password").getValue(String.class);
                                 if(password.equals(password)){
                                     showMessage("Successfully logged in");
+                                    PreferenceManager.getDefaultSharedPreferences(LoginActivity.this).edit()
+                                            .putString("currentUserMobile", number)
+                                            .apply();
                                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
                                     finish();
                                 }

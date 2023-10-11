@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -70,6 +73,14 @@ public class FetchDonorActivity extends AppCompatActivity {
         toggle.syncState();
 
 
+        Spinner spinnerBloodGroup = findViewById(R.id.spinnerBloodGroup);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Blood_Group, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerBloodGroup.setAdapter(adapter);
+
+
+
+
 
         //------------------------------------
 
@@ -102,6 +113,9 @@ public class FetchDonorActivity extends AppCompatActivity {
                     Intent intent = new Intent(FetchDonorActivity.this, MainActivity.class);
                     startActivity(intent);
 
+                }else if(id==R.id.userprofile){
+                    Intent intent = new Intent(FetchDonorActivity.this, UserProfile.class);
+                    startActivity(intent);
                 }
                 return true;
             }
@@ -115,11 +129,41 @@ public class FetchDonorActivity extends AppCompatActivity {
         donorAdapter = new DonorAdapter(donorModels, this);
         recyclerView.setAdapter(donorAdapter);
         populateHomePage();
+
+
+        spinnerBloodGroup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String selectedBloodGroup = parentView.getItemAtPosition(position).toString();
+
+                // Call the method to populate the RecyclerView with donors of the selected blood group
+                if ("Select Blood Group".equals(selectedBloodGroup))
+                {
+                    populateHomePage();
+                }
+                else
+                 populateHomePage2(selectedBloodGroup);
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // Do nothing if nothing is selected
+            }
+        });
+
+
+
+
+
+
     }
     public void populateHomePage(){
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                donorModels.clear();
                 for (DataSnapshot d:snapshot.getChildren()){
                     DonorModel donor=d.getValue(DonorModel.class);
                     donorModels.add(donor);
@@ -137,4 +181,30 @@ public class FetchDonorActivity extends AppCompatActivity {
 
 
     }
+    public void populateHomePage2(final String bloodGroup) {
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                donorModels.clear(); // Clear the previous data
+
+                for (DataSnapshot d : snapshot.getChildren()) {
+                    DonorModel donor = d.getValue(DonorModel.class);
+
+                    // Check if the donor's blood group matches the desired blood group
+                    if (donor != null && donor.getBlood_group().equalsIgnoreCase(bloodGroup)) {
+                        donorModels.add(donor);
+                    }
+                }
+
+                donorAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Handle onCancelled
+            }
+        });
+    }
+
+
 }

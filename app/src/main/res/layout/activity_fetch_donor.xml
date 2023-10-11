@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:openDrawer="start"
-    android:background="@android:color/white"
+    android:background="@drawable/grad_2"
     android:fitsSystemWindows="true"
     tools:context=".Activities.FetchDonorActivity">
 
@@ -24,42 +24,50 @@
             app:navigationIcon="@drawable/baseline_menu_24"
             app:title="@string/app_name"
             app:titleTextColor="@android:color/white" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_below="@id/toolbar"
-            android:background="#FAFAFA"
-            android:gravity="center"
+        <Spinner
+            android:id="@+id/spinnerBloodGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
             android:layout_centerHorizontal="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/pick_location"
-                android:textStyle="italic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:padding="5dp"
-                android:drawableEnd="@drawable/ic_location_on_black_24dp"
-                android:drawableTint="@android:color/black"
-                android:gravity="center"
-                android:text="Choose Location"
-                android:textAlignment="gravity"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
 
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearLayout"-->
+<!--            android:layout_below="@id/toolbar"-->
+<!--            android:background="#FAFAFA"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <TextView-->
+<!--                android:id="@+id/pick_location"-->
+<!--                android:textStyle="italic"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="8dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:drawableEnd="@drawable/ic_location_on_black_24dp"-->
+<!--                android:drawableTint="@android:color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Choose Location"-->
+<!--                android:textAlignment="gravity"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:textSize="16sp" />-->
+
+<!--        </LinearLayout>-->
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_below="@+id/linearLayout"
+            android:layout_below="@+id/spinnerBloodGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     </RelativeLayout>
 
-    <!--     Navigation drawer content -->
+<!--         Navigation drawer content -->
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
