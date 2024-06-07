@@ -1,0 +1,1 @@
+The JU BloodBook app is an innovative platform designed specifically for the students and faculty of Jahangirnagar University (JU). This app serves multiple purposes, providing a comprehensive repository of information about students while fostering a sense of community and mutual assistance among the university population. 
